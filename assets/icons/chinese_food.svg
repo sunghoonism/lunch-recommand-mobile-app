@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 그릇 -->
+  <path d="M12 5C8 5 5 6.5 5 8.5V16C5 18 8 19.5 12 19.5C16 19.5 19 18 19 16V8.5C19 6.5 16 5 12 5Z" fill="#FFFFFF" stroke="#333333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 짜장 소스 -->
+  <path d="M7 10C7 10 9 14 12 14C15 14 17 10 17 10" fill="#2E1A0F" stroke="#2E1A0F" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 면 -->
+  <path d="M8 8C8 8 9 12 12 12C15 12 16 8 16 8" stroke="#FFF3E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 9C9 9 10 11 12 11C14 11 15 9 15 9" stroke="#FFF3E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 7C10 7 11 10 12 10C13 10 14 7 14 7" stroke="#FFF3E0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 젓가락 -->
+  <path d="M16 3V9" stroke="#8D6E63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 2V8" stroke="#8D6E63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 고명 -->
+  <circle cx="10" cy="8.5" r="0.5" fill="#4CAF50"/>
+  <circle cx="14" cy="8.5" r="0.5" fill="#4CAF50"/>
+  <circle cx="12" cy="9.5" r="0.5" fill="#F44336"/>
+</svg> 

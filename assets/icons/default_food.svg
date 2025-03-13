@@ -1,0 +1,26 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 접시 -->
+  <ellipse cx="12" cy="18" rx="8" ry="2" fill="#FFFFFF" stroke="#333333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 포크 -->
+  <path d="M8 4V10" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 12V18" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 5H10" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 7H10" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="0.5"/>
+  
+  <!-- 나이프 -->
+  <path d="M16 4V18" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 5L18 5" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 5L16 10L18 5" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="0.5"/>
+  
+  <!-- 음식 -->
+  <circle cx="12" cy="14" r="3" fill="#FFF9C4" stroke="#FFC107" stroke-width="0.5"/>
+  <path d="M10 14C10 14 11 15 12 15C13 15 14 14 14 14" stroke="#FF9800" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 13C10 13 11 12 12 12C13 12 14 13 14 13" stroke="#FF9800" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 장식 -->
+  <circle cx="12" cy="12" r="0.5" fill="#4CAF50"/>
+  <circle cx="10.5" cy="13.5" r="0.5" fill="#F44336"/>
+  <circle cx="13.5" cy="13.5" r="0.5" fill="#3F51B5"/>
+</svg> 

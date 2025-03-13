@@ -1,0 +1,15 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 밥그릇 -->
+  <path d="M8 10C8 10 8 16 12 16C16 16 16 10 16 10C16 10 16 8 12 8C8 8 8 10 8 10Z" fill="#FFFFFF" stroke="#333333" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 밥 -->
+  <path d="M9 10C9 10 9 14 12 14C15 14 15 10 15 10" fill="#FFFAF0" stroke="#EEEEEE" stroke-width="0.5"/>
+  
+  <!-- 젓가락 -->
+  <path d="M6 6V12" stroke="#8D6E63" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4 5V11" stroke="#8D6E63" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 숟가락 -->
+  <path d="M18 6L18 12" stroke="#9E9E9E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="18" cy="13" rx="1" ry="0.5" fill="#EEEEEE" stroke="#9E9E9E" stroke-width="0.5"/>
+</svg> 
