@@ -26,14 +26,65 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  // 오픈소스 정보를 보여주는 모달 다이얼로그
+  void _showOpenSourceInfo() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('오픈소스 정보', style: TextStyle(fontWeight: FontWeight.bold)),
+          content: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Text('프로그래밍', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                SizedBox(height: 4),
+                Text('Claude (Anthropic)'),
+                SizedBox(height: 16),
+                
+                Text('아이콘', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                SizedBox(height: 4),
+                Text('DALL·E (OpenAI)'),
+                SizedBox(height: 16),
+                
+                Text('날씨 정보', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                SizedBox(height: 4),
+                Text('기상청 날씨 정보'),
+                SizedBox(height: 16),
+                
+                Text('이 앱은 오픈소스 라이브러리와 API를 활용하여 제작되었습니다. 모든 저작권은 각 저작권자에게 있습니다.'),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('닫기'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('오늘의 점심 추천'),
         actions: [
+          // info 아이콘 추가
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            tooltip: '오픈소스 정보',
+            onPressed: _showOpenSourceInfo,
+          ),
           IconButton(
             icon: const Icon(Icons.history),
+            tooltip: '추천 기록',
             onPressed: () {
               Navigator.push(
                 context,

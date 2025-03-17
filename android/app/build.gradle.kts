@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -28,6 +31,9 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        
+        // AdMob 앱 ID 설정
+        manifestPlaceholders["admobAppId"] = getAdMobAppId()
     }
 
     buildTypes {
@@ -41,4 +47,27 @@ android {
 
 flutter {
     source = "../.."
+}
+
+// AdMob 앱 ID를 가져오는 함수
+fun getAdMobAppId(): String {
+    // 로컬 속성 파일에서 값을 가져오거나 기본값 사용
+    val localProperties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(FileInputStream(localPropertiesFile))
+        val appId = localProperties.getProperty("admob.app.id")
+        if (appId != null) {
+            return appId
+        }
+    }
+    
+    // 환경 변수에서 값을 가져오거나 기본값 사용
+    val envAppId = System.getenv("ADMOB_APP_ID")
+    if (envAppId != null) {
+        return envAppId
+    }
+    
+    // 디버그 모드에서는 테스트 앱 ID 사용
+    return "ca-app-pub-3940256099942544~3347511713" // 테스트 앱 ID
 }

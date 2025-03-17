@@ -194,12 +194,34 @@ class RecommendationController with ChangeNotifier {
     }
   }
   
+  // 페이지별 식사 기록 가져오기
+  Future<List<Food>> getFoodsByPage(int page, int pageSize) async {
+    try {
+      return await _databaseService.getFoodsByPage(page, pageSize);
+    } catch (e) {
+      _errorMessage = '식사 기록 가져오기 실패: $e';
+      notifyListeners();
+      return [];
+    }
+  }
+  
   // 최근 추천 기록 가져오기
   Future<List<Recommendation>> getRecentRecommendations() async {
     try {
       return await _databaseService.getRecentRecommendations(10);
     } catch (e) {
       _errorMessage = '최근 추천 기록 가져오기 실패: $e';
+      notifyListeners();
+      return [];
+    }
+  }
+  
+  // 페이지별 추천 기록 가져오기
+  Future<List<Recommendation>> getRecommendationsByPage(int page, int pageSize) async {
+    try {
+      return await _databaseService.getRecommendationsByPage(page, pageSize);
+    } catch (e) {
+      _errorMessage = '추천 기록 가져오기 실패: $e';
       notifyListeners();
       return [];
     }

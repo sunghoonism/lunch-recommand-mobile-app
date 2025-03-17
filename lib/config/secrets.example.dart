@@ -5,5 +5,9 @@ class Secrets {
   // 기상청 API 키
   static const String weatherApiKey = "여기에_실제_API_키를_입력하세요";
   
+  // AdMob 관련 정보
+  static const String adMobAppId = "여기에_실제_AdMob_앱_ID를_입력하세요";
+  static const String adMobBannerAdUnitId = "여기에_실제_AdMob_광고_단위_ID를_입력하세요";
+  
   // 추가적인 비밀 정보들을 여기에 저장할 수 있습니다.
 } 

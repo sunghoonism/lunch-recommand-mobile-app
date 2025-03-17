@@ -118,6 +118,23 @@ class DatabaseService {
       return Food.fromMap(maps[i]);
     });
   }
+  
+  // 페이지별 식사 기록 가져오기 (페이지네이션)
+  Future<List<Food>> getFoodsByPage(int page, int pageSize) async {
+    final db = await database;
+    final offset = page * pageSize;
+    
+    final List<Map<String, dynamic>> maps = await db.query(
+      'foods',
+      orderBy: 'date DESC',
+      limit: pageSize,
+      offset: offset,
+    );
+    
+    return List.generate(maps.length, (i) {
+      return Food.fromMap(maps[i]);
+    });
+  }
 
   // 특정 기간 내의 음식 데이터 가져오기
   Future<List<Food>> getFoodsByDateRange(DateTime start, DateTime end) async {
@@ -185,6 +202,23 @@ class DatabaseService {
       orderBy: 'timestamp DESC',
       limit: limit,
     );
+    return List.generate(maps.length, (i) {
+      return Recommendation.fromMap(maps[i]);
+    });
+  }
+  
+  // 페이지별 추천 결과 가져오기 (페이지네이션)
+  Future<List<Recommendation>> getRecommendationsByPage(int page, int pageSize) async {
+    final db = await database;
+    final offset = page * pageSize;
+    
+    final List<Map<String, dynamic>> maps = await db.query(
+      'recommendations',
+      orderBy: 'timestamp DESC',
+      limit: pageSize,
+      offset: offset,
+    );
+    
     return List.generate(maps.length, (i) {
       return Recommendation.fromMap(maps[i]);
     });

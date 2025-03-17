@@ -43,13 +43,6 @@
 2. `secrets.dart` 파일 내의 비밀 정보를 실제 값으로 변경합니다.
 3. `secrets.dart` 파일은 `.gitignore`에 포함되어 있어 Git에 올라가지 않습니다.
 
-```dart
-// secrets.dart 예시
-class Secrets {
-  static const String weatherApiKey = "여기에_실제_API_키를_입력하세요";
-}
-```
-
 **주의**: 절대로 실제 API 키나 비밀번호를 Git에 올리지 마세요!
 
 ## 기여 방법
