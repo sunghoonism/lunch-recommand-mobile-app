@@ -2,7 +2,7 @@
 
 점심 메뉴 선택에 어려움을 겪는 사용자들을 위한 Flutter 기반 모바일 애플리케이션입니다. 사용자의 위치, 날씨, 이전 식사 기록 등을 고려하여 최적의 점심 메뉴를 추천해 드립니다.
 
-![앱 스크린샷](screenshots/app_screenshot.png)
+<img src=docs/home.jpg width=220></img> <img src=docs/insert.jpg width=220></img> <img src=docs/my_history.jpg width=220></img> <img src=docs/recommand_history.jpg width=220></img> 
 
 ## 주요 기능
 
