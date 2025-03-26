@@ -3,11 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:flutter/foundation.dart';
 import 'dart:io' show Platform;
 import 'controllers/recommendation_controller.dart';
 import 'views/home_screen.dart';
-import 'config/secrets.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,10 +13,6 @@ void main() {
   // 애드몹 초기화
   // iOS에서는 코드에서 앱 ID를 설정해야 함
   if (Platform.isIOS) {
-    // 디버그 모드에서는 테스트 앱 ID 사용
-    final appId = kDebugMode 
-        ? 'ca-app-pub-3940256099942544~1458002511' // 테스트 앱 ID
-        : Secrets.adMobAppId;
     MobileAds.instance.initialize().then((initializationStatus) {
       // iOS에서 앱 ID 설정
       MobileAds.instance.updateRequestConfiguration(

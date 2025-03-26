@@ -70,6 +70,30 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // 도움말 정보를 보여주는 모달 다이얼로그
+  void _showHelpInfo() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('도움말', style: TextStyle(fontWeight: FontWeight.bold)),
+          content: const Text(
+            '더 많은 기록을 추가할수록 더 정확한 추천을 받을 수 있습니다. 6개월 이전의 기록은 기상정보를 받아오지 못하고 저장에 실패할 수 있습니다.',
+            style: TextStyle(fontSize: 15),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('확인'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,6 +105,12 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: const Icon(Icons.info_outline),
             tooltip: '오픈소스 정보',
             onPressed: _showOpenSourceInfo,
+          ),
+          // 도움말 아이콘 추가
+          IconButton(
+            icon: const Icon(Icons.help_outline),
+            tooltip: '도움말',
+            onPressed: _showHelpInfo,
           ),
           IconButton(
             icon: const Icon(Icons.history),
